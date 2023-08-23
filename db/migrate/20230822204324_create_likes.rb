@@ -1,9 +1,8 @@
 class CreateLikes < ActiveRecord::Migration[7.0]
   def change
-    create_table :likes do |t|
-      t.integer :author_id
-      t.integer :post_id
-
+    create_join_table :users, :posts, table_name: :likes, column_options: { null: false } do |t|
+      t.rename :user_id, :AuthorId
+      t.rename :post_id, :PostId
       t.timestamps
     end
   end
