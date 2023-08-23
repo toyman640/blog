@@ -52,6 +52,9 @@
 ### Key Features <a name="key-features"></a>
 
 - **Utilises postgres database**
+- **Has a Model For New Users**
+- **Posts can be commented on**
+- **Posts can be liked**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
