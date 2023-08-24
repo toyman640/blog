@@ -114,7 +114,9 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-N/A
+**User can create post**
+**User can comment on a  post**
+**User can like a post**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
