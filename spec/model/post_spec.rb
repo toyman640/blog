@@ -3,8 +3,6 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   subject { User.new(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.') }
 
-
-
   it 'title should be present' do
     post = Post.new(author: subject.id, title: 'Hello', text: 'This is my first post')
     post.title = nil
