@@ -13,7 +13,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog app ](#-Blog app-)
+- [📖 Blog app ](#about-project)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -22,7 +22,6 @@
     - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
-    - [Run tests](#run-tests)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
@@ -106,7 +105,7 @@ Clone this repository to your desired folder:
 
 - GitHub: [@toyman640](https://github.com/toyman640)
 - Twitter: [@\_toyman](https://twitter.com/_toyman)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/falako-omotoyosi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
