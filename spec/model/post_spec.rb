@@ -43,31 +43,30 @@ RSpec.describe Post, type: :model do
   it 'returns the five most recent comments' do
     user = User.create(name: 'Billy', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Nile.')
     post = Post.create(author: user, title: 'Hello', text: 'This is my first post')
-  
+
     old_comments = []
-    3.times { old_comments << Comment.create(post: post, author: user) }
-  
+    3.times { old_comments << Comment.create(post:, author: user) }
+
     new_comments = []
-    5.times { new_comments << Comment.create(post: post, author: user) }
-  
+    5.times { new_comments << Comment.create(post:, author: user) }
+
     recent_comments = post.recent_comments
-  
+
     expect(recent_comments).to eq(new_comments.reverse)
   end
 
   it 'updates comments_counter when comments are added' do
     post = Post.create(author: subject, title: 'Hello', text: 'This is my first post')
 
-    expect {
-      Comment.create(post: post, author: subject)
-    }.to change { post.comments_counter }.by(1)
+    expect do
+      Comment.create(post:, author: subject)
+    end.to change { post.comments_counter }.by(1)
   end
 
   it 'increments user posts_counter after post creation' do
-    expect {
+    expect do
       Post.create(author: subject, title: 'Hello', text: 'This is my first post')
       subject.reload
-    }.to change { subject.posts_counter }.by(1)
+    end.to change { subject.posts_counter }.by(1)
   end
-
 end
