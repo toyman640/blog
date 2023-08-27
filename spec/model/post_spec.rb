@@ -73,9 +73,9 @@ RSpec.describe Post, type: :model do
   it 'updates likes_counter when likes are added' do
     post = Post.create(author: subject, title: 'Hello', text: 'This is my first post')
 
-    expect {
-      Like.create(post: post, author: subject)
+    expect do
+      Like.create(post:, author: subject)
       post.reload
-    }.to change { post.likes_counter }.by(1)
+    end.to change { post.likes_counter }.by(1)
   end
 end
