@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @specific_user = User.find(params[:user_id])
-    @specific_post = Post.where(author_id: @specific_user.id).find(params[:post_id])
+    @specific_post = Post.where(author_id: @specific_user.id).find(params[:id])
     @post_comments = Comment.where(post_id: @specific_post.id)
   end
 end
