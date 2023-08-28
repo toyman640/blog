@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Users</title>
+</head>
+<body>
+  <h1>All Users</h1>
+  <h2><%= @author.name %></h2>
+  <ul>
+    <% @author_posts.each do |post| %>
+      <li><%= post.id %></li>
+      <li><%= post.title %></li>
+      <li>Number of posts: <%= post.text %></li>
+      <p>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
+      
+    <% end %>
+  </ul>
+</body>
+</html>

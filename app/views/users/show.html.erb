@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Users</title>
+</head>
+<body>
+  <body>
+  <h1><%= @specific_user.name %></h1>
+  <p>Bio: <%= @specific_user.bio %></p>
+  <h2>Posts by <%= @specific_user.name %></h2>
+  <ul>
+    <% @user_post.each do |post| %>
+      <li><%= post.title %></li>
+      <p>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
+    <% end %>
+  </ul>
+  
+</body>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Users</title>
+</head>
+<body>
+  <h1><%= @specific_user.name %></h1>
+  <p>Title: <%= @specific_post.title %></p>
+  <p>Content: <%= @specific_post.text %></p>
+  <p>
+  <%  @post_comments.each do |comment| %>
+    <p>Comments: <%= comment.text %></p>
+  <% end %>
+</body>
+</body>
+</html>
