@@ -2,10 +2,23 @@
 <html>
 <head>
   <title>All Users</title>
+  <%= stylesheet_link_tag "style" %>
 </head>
 <body>
-  <h1>All Users</h1>
-  <h2>Username</h2>
-  <p>Number of posts: x</p>
+  <div class ="container">
+    <% @users.each do |user| %>
+      <a class="card-link" href="<%= user_path(user) %>">
+        <div class="cards">
+          <img src="https://your-image-url.com/image.jpg" alt="Image Description">
+          <div class="content">
+            <h2>Username: <%= user.name %></h2>
+            <p class="post-count">Number of posts: x</p>
+          </div>
+        </div>
+        
+      </a>
+    <% end %>
+  </div>
+  
 </body>
 </html>
