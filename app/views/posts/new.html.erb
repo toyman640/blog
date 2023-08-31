@@ -1,0 +1,26 @@
+<h2>New Post</h2>
+<%= form_with model: @new_post, url: create_post_path, method: :post  do |form| %>
+  <div>
+    <%= form.label :author_id %><br>
+    <%= form.text_field :author_id, readonly: true %>
+  </div>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </div>
+  <%= form.submit %>
+<% end %>
+<% if @new_post.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@new_post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <ul>
+      <% @new_post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
