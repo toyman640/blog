@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Users</title>
+  <%= stylesheet_link_tag "style" %>
+</head>
+<body>
+  <div class="post-index">
+    <% @author_posts.each do |post| %>
+      <a class="card-link" href="<%= user_post_path(post.id) %>">
+        <div class="post-card">
+          <img src="https://your-image-url.com/image.jpg" alt="Image Description">
+          <div class="content">
+            <h2>Username</h2>
+            <p class="post-count">Number of posts: x</p>
+          </div>
+        </div>
+        <div class="border">
+          <p>Post #1</p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, molestiae aliquid? Consequatur est, temporibus esse mollitia iusto magnam, ducimus aut fugit nihil, harum illum velit voluptate sunt minus. Voluptas, quos?
+          </p>
+          <p class="post-count">Comments: x, Likes: y</p>
+        </div>
+        <% @post_comments.each do |comment| %>
+        <div class="border">
+          <p>Username: <%= comment.text %></p>
+          <p>Username: Comments 1</p>
+          <p>Username: Comments 2</p>
+          <p>Username: Comments 3</p>
+          <p>Username: Comments 4</p>
+          <p>Username: Comments 5</p>
+        </div>
+        <% end %>
+      </a>
+    <% end %>
+  </div>
+</body>
+</html>
