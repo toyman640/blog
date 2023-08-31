@@ -22,13 +22,16 @@
           </p>
           <p class="post-count">Comments: x, Likes: y</p>
         </div>
+        <% @post_comments.each do |comment| %>
         <div class="border">
+          <p>Username: <%= comment.text %></p>
           <p>Username: Comments 1</p>
           <p>Username: Comments 2</p>
           <p>Username: Comments 3</p>
           <p>Username: Comments 4</p>
           <p>Username: Comments 5</p>
         </div>
+        <% end %>
       </a>
     <% end %>
   </div>
