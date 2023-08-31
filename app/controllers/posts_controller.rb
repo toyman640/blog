@@ -7,7 +7,6 @@ class PostsController < ApplicationController
       @post_comments.concat(post.recent_comments)
     end
   end
-  
 
   def show
     @specific_user = User.find(params[:user_id])
