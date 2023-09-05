@@ -6,15 +6,13 @@
 </head>
 <body>
   <div class="post-index">
-    <% @author_posts.each do |post| %>
-      <a class="card-link" href="<%= user_post_path(post.id) %>">
-        <div class="post-card">
-          <img src="https://your-image-url.com/image.jpg" alt="Image Description">
-          <div class="content">
+  <div class="content">
             <h2>Username</h2>
             <p class="post-count">Number of posts: x</p>
           </div>
-        </div>
+    <% @author_posts.each do |post| %>
+      <a class="card-link" href="<%= user_post_path(post.id) %>">
+       
         <div class="border">
           <p>Post #1</p>
           <p>

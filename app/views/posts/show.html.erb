@@ -8,8 +8,9 @@
   <div class ="container">
     <div class="cards">
       <div class="detail-top">
-        <p>Post 1 by username</p>
-        <p>Comments: x Likes: x</p>
+        <p>Post 1 by username  <%= @specific_post.title %></p>
+
+        <p>Post 1 by username  <%= @specific_user.id %></p>        <p>Comments: x Likes: x</p>
       </div>
     </div>
     <div class="main-section">
@@ -27,6 +28,10 @@
       <p>Username: Comments 8</p>
       <p>Username: Comments 9</p>
       <p>Username: Comments 10</p>
+      
+      <a href="<%= new_comment_path(user_id: @specific_user.id, post_id: @specific_post.id)) %>">
+        <button>Create comment</button
+      </a>
     </div>
   </div>
 </body>

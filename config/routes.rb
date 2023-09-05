@@ -9,5 +9,14 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show', as: "user"
   get '/users/:id/posts', to: 'posts#index', as: "post"
   get '/users/:user_id/posts/:id', to: 'posts#show', as: 'user_post'
-  
+  post '/users/new-comment', to: 'comments#create', as: 'create_comment'
+  # get '/users/new-comment', to: 'comments#new', as: 'new_comment'
+  get '/users/:user_id/posts/:post_id/new-comment', to: 'comments#new', as: 'new_comment'
+  # resources :users, only: [:index, :show] do
+  #   resources :posts, only: [:index, :show, :new, :create] do
+  #     resources :comments, only: [:new, :create]
+  #     resources :likes, only: [:create]
+  #   end
+  # end
+
 end
