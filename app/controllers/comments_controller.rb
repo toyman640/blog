@@ -14,11 +14,10 @@ class CommentsController < ApplicationController
       text: params[:text]
     )
     if @comment.save
-      puts "saved"
+      flash[:notice] = 'Comment was successfully created.'
+      redirect_to user_post_path(@specific_user, @specific_post)
     else
-      render 'new'
-      puts @comment.errors.full_messages
-      puts "not saved"
+      render :new
     end
   end
 
