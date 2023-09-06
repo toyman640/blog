@@ -17,11 +17,11 @@ class PostsController < ApplicationController
   def new
     @new_post = Post.new
   end
-  
+
   def create
     @new_post = Post.new(post_params)
     @new_post.author_id = current_user.id
-  
+
     if @new_post.save
       redirect_to users_path, notice: 'Post was successfully created.'
     else
@@ -35,5 +35,4 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :text)
   end
-  
 end

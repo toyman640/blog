@@ -1,8 +1,7 @@
 class CommentsController < ApplicationController
-
   def new
     @specific_post = Post.find(params[:post_id])
-    @specific_user =  User.find(params[:user_id])
+    @specific_user = User.find(params[:user_id])
   end
 
   def create
@@ -20,5 +19,4 @@ class CommentsController < ApplicationController
       render :new
     end
   end
-
 end
