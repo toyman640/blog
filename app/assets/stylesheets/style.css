@@ -1,0 +1,52 @@
+.container {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+  padding: 0.5%;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.content {
+  width: 70%;
+}
+
+.post-count {
+  text-align: end;
+}
+
+.card-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.post-index {
+  width: 25%;
+  margin-left: 37.5%;
+}
+
+.post-card {
+  display: flex;
+}
+
+.border {
+  margin-top: 0.8%;
+  border: 2px solid #000;
+  padding: 3%;
+}
+
+.detail-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main-section {
+  width: 50%;
+  margin-left: 25%;
+}
