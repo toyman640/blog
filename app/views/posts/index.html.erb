@@ -11,10 +11,10 @@
             <p class="post-count">Number of posts: x</p>
           </div>
     <% @author_posts.each do |post| %>
-      <a class="card-link" href="<%= user_post_path(post.id) %>">
+      <a class="card-link" href="<%= user_post_path(post.author_id, post.id) %>">
        
         <div class="border">
-          <p>Post #1</p>
+          <p>Post #1 <%= post.title %></p>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, molestiae aliquid? Consequatur est, temporibus esse mollitia iusto magnam, ducimus aut fugit nihil, harum illum velit voluptate sunt minus. Voluptas, quos?
           </p>
