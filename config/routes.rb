@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post '/users/new-comment', to: 'comments#create', as: 'create_comment'
   # get '/users/new-comment', to: 'comments#new', as: 'new_comment'
   get '/users/:user_id/posts/:post_id/new-comment', to: 'comments#new', as: 'new_comment'
+  post '/users/like-post', to: 'likes#create', as: 'create_like'
   # resources :users, only: [:index, :show] do
   #   resources :posts, only: [:index, :show, :new, :create] do
   #     resources :comments, only: [:new, :create]
