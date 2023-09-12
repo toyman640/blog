@@ -107,6 +107,12 @@ Clone this repository to your desired folder:
 - Twitter: [@\_toyman](https://twitter.com/_toyman)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/falako-omotoyosi/)
 
+👤 **Hafiz Massam Tabraiz Khan**
+
+- GitHub: [@githubhandle](https://github.com/HafizMassamTabraizKhan)
+- Twitter: [@twitterhandle](https://twitter.com/MassamTabraiz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hafiz-massam-tabraiz-khan-167644255/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
