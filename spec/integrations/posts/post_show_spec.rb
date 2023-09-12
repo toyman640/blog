@@ -6,7 +6,7 @@ RSpec.describe 'Post Show Page', type: :system do
       # Create test users
       @user1 = User.create(name: 'User1', bio: 'Bio1', photo: 'https://images.pexels.com/photos/1405963/pexels-photo-1405963.jpeg?auto=compress&cs=tinysrgb&w=600')
       @user2 = User.create(name: 'User2', bio: 'Bio2', photo: 'https://images.pexels.com/photos/1405963/pexels-photo-1405963.jpeg?auto=compress&cs=tinysrgb&w=600')
-      
+
       # Create test posts
       @post1 = Post.create(title: 'Post 1', text: 'Post 1 content', author: @user1)
       @post2 = Post.create(title: 'Post 2', text: 'Post 2 content', author: @user1)
@@ -61,6 +61,5 @@ RSpec.describe 'Post Show Page', type: :system do
         expect(page).to have_content(comment.text)
       end
     end
-    
   end
 end

@@ -66,7 +66,6 @@ RSpec.describe 'User Index Page', type: :system do
 
     it 'displays a section for pagination if there are more posts than fit on the view' do
       visit post_path(@user1)
-      save_and_open_page
       expect(page).to have_selector('.pagination')
     end
 
