@@ -6,17 +6,17 @@
 </head>
 <body>
   <div class ="container">
+    <h2>Home Page</h2>
     <% @users.each do |user| %>
-      <a class="card-link" href="<%= user_path(user) %>">
-        <div class="cards">
-          <img src="https://your-image-url.com/image.jpg" alt="Image Description">
+      <div class="cards">
+        <a class="card-link" href="<%= user_path(user) %>">
+          <img src="<%= user.photo %>" alt="Image Description">
           <div class="content">
             <h2>Username: <%= user.name %></h2>
-            <p class="post-count">Number of posts: x</p>
+            <p class="post-count">Number of posts: <%= user.posts_counter %></p>
           </div>
-        </div>
-        
-      </a>
+        </a>
+      </div> 
     <% end %>
     <a class="card-link" href="<%= new_post_path %>"><button>Create New Post</button></a>
   </div>

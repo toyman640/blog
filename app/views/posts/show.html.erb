@@ -8,13 +8,14 @@
   <div class ="container">
     <div class="cards">
       <div class="detail-top">
-        <p>Post 1 by username  <%= @specific_post.title %></p>
+        <p>Post 1 by username  <%= @specific_post.author.name %></p>
 
-        <p>Post 1 by username  <%= @specific_user.id %></p>        <p>Comments: x Likes: x</p>
+        <p>Post 1 by username  <%= @specific_user.id %></p>        <p>Comments: <%= @specific_post.comments_counter %> Likes: <%= @specific_post.likes_counter %></p>
       </div>
     </div>
     <div class="main-section">
       <p>
+      <%= @specific_post.text %>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis voluptatum dolores voluptate animi maxime suscipit voluptates placeat vitae aliquam harum assumenda, culpa magnam adipisci incidunt sequi aperiam possimus aliquid doloribus!
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis voluptatum dolores voluptate animi maxime suscipit voluptates placeat vitae aliquam harum assumenda, culpa magnam adipisci incidunt sequi aperiam possimus aliquid doloribus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis voluptatum dolores voluptate animi maxime suscipit voluptates placeat vitae aliquam harum assumenda, culpa magnam adipisci incidunt sequi aperiam possimus aliquid doloribus!
       <p>

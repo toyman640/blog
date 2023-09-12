@@ -7,31 +7,35 @@
 <body>
   <div class="post-index">
   <div class="content">
-            <h2>Username</h2>
-            <p class="post-count">Number of posts: x</p>
-          </div>
+    <h2>Username</h2>
+    <p class="post-count">Number of posts: x</p>
+  </div>
+  <div class="cards">
+    <img src="<%= @author.photo %>" alt="Image Description">
+    <div class="content">
+      <h2>Username: <%= @author.name %></h2>
+      <p class="post-count">Number of posts: <%= @author.posts_counter %></p>
+    </div>
+  </div> 
     <% @author_posts.each do |post| %>
       <a class="card-link" href="<%= user_post_path(post.author_id, post.id) %>">
        
         <div class="border">
           <p>Post #1 <%= post.title %></p>
           <p>
+          <%= post.text %>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, molestiae aliquid? Consequatur est, temporibus esse mollitia iusto magnam, ducimus aut fugit nihil, harum illum velit voluptate sunt minus. Voluptas, quos?
           </p>
-          <p class="post-count">Comments: x, Likes: y</p>
+          <p class="post-count">Comments: <%= post.comments_counter %></p> <p class="post-count">Likes: <%= post.likes_counter %></p>
         </div>
-        <% @post_comments.each do |comment| %>
-        <div class="border">
-          <p>Username: <%= comment.text %></p>
-          <p>Username: Comments 1</p>
-          <p>Username: Comments 2</p>
-          <p>Username: Comments 3</p>
-          <p>Username: Comments 4</p>
-          <p>Username: Comments 5</p>
-        </div>
-        <% end %>
+        <% post.recent_comments.each do |comment| %>
+          <div class="border">
+            <p>Username: <%= comment.text %></p>
+          </div>
+        <% end %> 
       </a>
     <% end %>
+    <button class="pagination">Pagination</button>
   </div>
 </body>
 </html>
