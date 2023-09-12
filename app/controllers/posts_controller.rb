@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @author = User.find(params[:id])
-    @author_posts = Post.where(author_id: @author.id)
+    @author_posts = Post.includes(:comments).where(author_id: @author.id)
     @post_comments = []
     @author_posts.each do |post|
       @post_comments.concat(post.recent_comments)
