@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <head>
+    <title>All Users</title>
+  </head>
+  <body>
+    <div class ="container">
+      <div class="cards">
+      <img src="<%= @specific_user.photo %>" alt="Image Description">
+        <div class="content">
+          <h2>Username: <%= @specific_user.name %></h2>
+          <p class="post-count">Number of posts: <%= @specific_user.posts_counter %></p>
+        </div>
+        
+      </div>
+      <div class="">
+        <p class="">
+          Bio <br>
+          <%= @specific_user.bio %>
+        </p>
+      </div>
+      <% @user_post.each do |post|  %>
+        <a class="card-link" href="<%= user_post_path(post.author_id, post.id) %>">
+          <div>
+            <p>Post #1 <%= post.title %></p>
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur commodi iste non quae soluta tenetur ipsa magni ea, eos a ab quasi, cumque atque blanditiis nihil aliquid quaerat ex rem!
+            </p>
+            <% post.comments.each do |comment| %>
+              <div>
+                <p><strong><%= comment.author.name %>:</strong> <%= comment.text %></p>
+              </div>
+            <% end %>
+          </div>
+        </a>
+      <% end %>
+       
+      <a class="card-link" href="<%= post_path(id: @specific_user.id) %>"><button>See all posts</button></a>
+    </div>
+   
+  </body>
+</html>
