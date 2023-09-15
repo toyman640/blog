@@ -19,6 +19,7 @@
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis voluptatum dolores voluptate animi maxime suscipit voluptates placeat vitae aliquam harum assumenda, culpa magnam adipisci incidunt sequi aperiam possimus aliquid doloribus!
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis voluptatum dolores voluptate animi maxime suscipit voluptates placeat vitae aliquam harum assumenda, culpa magnam adipisci incidunt sequi aperiam possimus aliquid doloribus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis voluptatum dolores voluptate animi maxime suscipit voluptates placeat vitae aliquam harum assumenda, culpa magnam adipisci incidunt sequi aperiam possimus aliquid doloribus!
       <p>
+      
       <p>Username: Comments 1</p>
       <p>Username: Comments 2</p>
       <p>Username: Comments 3</p>
@@ -29,17 +30,32 @@
       <p>Username: Comments 8</p>
       <p>Username: Comments 9</p>
       <p>Username: Comments 10</p>
-
+      <% @post_comments.each do |comment| %>
+        <div class="comment">
+          <!-- Display the comment content here -->
+          <%= comment.text %>
+      
+          <!-- Check if the current user is the author of the comment -->
+          <% if comment.author == current_user %>
+            <!-- Create a link to delete the comment -->
+            <%= link_to 'Delete', delete_comment_path(user_id: @specific_user, post_id: @specific_post, id: comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      <% end %>
       <p>
         <%= form_with model: @like, url: create_like_path(user_id: @specific_post.author_id, post_id: @specific_post), method: :post do |form| %>
           <%= form.submit 'Like' %>
       
         <% end %>
       </p>
+     
       
       <a href="<%= new_comment_path(user_id: @specific_user.id, post_id: @specific_post.id) %>">
         <button>Create comment</button
       </a>
+      
+      <%= link_to 'Delete', delete_post_path(user_id: @specific_user.id, post_id: @specific_post.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+  
     </div>
   </div>
 </body>
